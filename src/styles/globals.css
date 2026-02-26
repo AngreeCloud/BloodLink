@@ -417,6 +417,16 @@ th {
   }
 }
 
+.public-footer {
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(17, 19, 24, 0.1);
+  text-align: center;
+  color: rgba(17, 19, 24, 0.7);
+}
+
+.private-navbar {
+  background: linear-gradient(90deg, #5d1580, #a1144f);
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
