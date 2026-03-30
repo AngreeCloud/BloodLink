@@ -19,7 +19,7 @@ const Perfil = () => {
         <h1>Perfil do utilizador</h1>
         <p>Informacao proveniente do Firebase Auth e do registo.</p>
         <div style={{ marginTop: "1rem" }}>
-          <Link className="button button-secondary" to="/perfil/editar">
+          <Link className="button button-secondary" to="editar">
             Editar perfil
           </Link>
         </div>

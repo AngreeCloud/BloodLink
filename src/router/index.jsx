@@ -19,17 +19,17 @@ import RegisterPublic from "../public/RegisterPublic";
 const AppRouter = () => {
   return (
     <Routes>
-      <Route element={<PublicLayout />}>
-        <Route path="/" element={<HomePublic />} />
-        <Route path="/reservas" element={<ReservasPublic />} />
-        <Route path="/postos" element={<PostosPublic />} />
-        <Route path="/brigadas" element={<BrigadasPublic />} />
-        <Route path="/quiz" element={<QuizPublic />} />
-        <Route path="/educacao" element={<EducacaoPublic />} />
+      <Route path="" element={<PublicLayout />}>
+        <Route index element={<HomePublic />} />
+        <Route path="reservas" element={<ReservasPublic />} />
+        <Route path="postos" element={<PostosPublic />} />
+        <Route path="brigadas" element={<BrigadasPublic />} />
+        <Route path="quiz" element={<QuizPublic />} />
+        <Route path="educacao" element={<EducacaoPublic />} />
       </Route>
 
-      <Route path="/login" element={<LoginPublic />} />
-      <Route path="/register" element={<RegisterPublic />} />
+      <Route path="login" element={<LoginPublic />} />
+      <Route path="register" element={<RegisterPublic />} />
 
       <Route
         element={(
@@ -38,14 +38,14 @@ const AppRouter = () => {
           </AuthGuard>
         )}
       >
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/perfil" element={<Perfil />} />
-        <Route path="/historico" element={<Historico />} />
-        <Route path="/gamificacao" element={<Gamificacao />} />
-        <Route path="/notificacoes" element={<NotificacoesPrivadas />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="perfil" element={<Perfil />} />
+        <Route path="historico" element={<Historico />} />
+        <Route path="gamificacao" element={<Gamificacao />} />
+        <Route path="notificacoes" element={<NotificacoesPrivadas />} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="." replace />} />
     </Routes>
   );
 };

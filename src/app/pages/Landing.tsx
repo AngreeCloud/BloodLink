@@ -18,15 +18,15 @@ const Landing = () => {
           </p>
           <div className="landing-cta">
             {isAuthenticated ? (
-              <Link className="button" to="/home">
+              <Link className="button" to="home">
                 Entrar na plataforma
               </Link>
             ) : (
               <>
-                <Link className="button" to="/register">
+                <Link className="button" to="register">
                   Criar conta
                 </Link>
-                <Link className="button button-secondary" to="/login">
+                <Link className="button button-secondary" to="login">
                   Entrar
                 </Link>
               </>
@@ -89,10 +89,10 @@ const Landing = () => {
           </p>
           {!isAuthenticated && (
             <div className="landing-cta">
-              <Link className="button" to="/register">
+              <Link className="button" to="register">
                 Comecar agora
               </Link>
-              <Link className="button button-secondary" to="/login">
+              <Link className="button button-secondary" to="login">
                 Ja tenho conta
               </Link>
             </div>

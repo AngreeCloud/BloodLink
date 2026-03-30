@@ -2,18 +2,18 @@ import { Navigate, NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../auth/useAuth";
 
 const links = [
-  { to: "/dashboard", label: "Dashboard" },
-  { to: "/perfil", label: "Perfil" },
-  { to: "/historico", label: "Historico" },
-  { to: "/gamificacao", label: "Gamificacao" },
-  { to: "/notificacoes", label: "Notificacoes" },
+  { to: "dashboard", label: "Dashboard" },
+  { to: "perfil", label: "Perfil" },
+  { to: "historico", label: "Historico" },
+  { to: "gamificacao", label: "Gamificacao" },
+  { to: "notificacoes", label: "Notificacoes" },
 ];
 
 const PrivateLayout = () => {
   const { isAuthenticated, logout } = useAuth();
 
   if (!isAuthenticated()) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="../login" replace />;
   }
 
   return (

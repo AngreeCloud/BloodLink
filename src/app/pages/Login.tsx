@@ -13,7 +13,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      const redirectPath = (location.state as { from?: Location })?.from?.pathname ?? "/home";
+      const redirectPath = (location.state as { from?: Location })?.from?.pathname ?? "home";
       navigate(redirectPath, { replace: true });
     }
   }, [isAuthenticated, navigate, location.state]);
@@ -86,7 +86,7 @@ const Login = () => {
           {isSubmitting ? "A validar..." : "Entrar"}
         </button>
         <p className="auth-links">
-          Ainda nao tem conta? <Link to="/register">Criar conta</Link>
+          Ainda nao tem conta? <Link to="../register">Criar conta</Link>
         </p>
       </form>
     </section>

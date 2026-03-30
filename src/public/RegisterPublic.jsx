@@ -18,7 +18,7 @@ const RegisterPublic = () => {
 
   useEffect(() => {
     if (isAuthenticated()) {
-      const redirectPath = location.state?.from?.pathname ?? "/dashboard";
+      const redirectPath = location.state?.from?.pathname ?? "dashboard";
       navigate(redirectPath, { replace: true });
     }
   }, [isAuthenticated, location.state, navigate]);
@@ -81,7 +81,7 @@ const RegisterPublic = () => {
         </div>
         {error && <p className="error-text">{error}</p>}
         <button type="submit" disabled={isSubmitting}>{isSubmitting ? "A criar..." : "Criar conta"}</button>
-        <p className="auth-links">Ja tem conta? <Link to="/login">Entrar</Link></p>
+        <p className="auth-links">Ja tem conta? <Link to="../login">Entrar</Link></p>
       </form>
     </section>
   );

@@ -79,7 +79,7 @@ const EditarPerfil = () => {
         phone: normalizeSpaces(phone),
         birthDate,
       });
-      navigate("/perfil", { replace: true });
+      navigate("..", { replace: true });
     } catch (submissionError) {
       const message = submissionError instanceof Error ? submissionError.message : "";
       setError(message || "Nao foi possivel actualizar o perfil.");
@@ -135,7 +135,7 @@ const EditarPerfil = () => {
           {error && <p className="error-text">{error}</p>}
 
           <div className="profile-edit-actions">
-            <Link className="button button-secondary" to="/perfil">
+            <Link className="button button-secondary" to="..">
               Cancelar
             </Link>
             <button type="submit" disabled={isSubmitting}>

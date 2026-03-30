@@ -18,9 +18,9 @@ const HomePublic = () => {
         <h1>Zona publica BloodLink</h1>
         <p>Niveis atuais de reservas e informacao de acesso rapido sem login.</p>
         <div className="landing-cta">
-          <Link className="button" to="/quiz">Posso Doar?</Link>
-          <Link className="button button-secondary" to="/brigadas">Ver Brigadas Moveis</Link>
-          <Link className="button button-secondary" to="/login">Entrar / Criar Conta</Link>
+          <Link className="button" to="quiz">Posso Doar?</Link>
+          <Link className="button button-secondary" to="brigadas">Ver Brigadas Moveis</Link>
+          <Link className="button button-secondary" to="login">Entrar / Criar Conta</Link>
         </div>
       </section>
 

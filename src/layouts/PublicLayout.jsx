@@ -1,12 +1,12 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/reservas", label: "Reservas" },
-  { to: "/postos", label: "Postos" },
-  { to: "/brigadas", label: "Brigadas" },
-  { to: "/quiz", label: "Quiz" },
-  { to: "/educacao", label: "Educacao" },
+  { to: "", label: "Home" },
+  { to: "reservas", label: "Reservas" },
+  { to: "postos", label: "Postos" },
+  { to: "brigadas", label: "Brigadas" },
+  { to: "quiz", label: "Quiz" },
+  { to: "educacao", label: "Educacao" },
 ];
 
 const PublicLayout = () => {
@@ -15,10 +15,10 @@ const PublicLayout = () => {
       <header className="navbar">
         <strong>BloodLink</strong>
         {links.map((item) => (
-          <NavLink key={item.to} to={item.to} end={item.to === "/"} className={({ isActive }) => (isActive ? "active" : "")}>{item.label}</NavLink>
+          <NavLink key={item.to} to={item.to} end={item.to === ""} className={({ isActive }) => (isActive ? "active" : "")}>{item.label}</NavLink>
         ))}
         <div className="navbar-actions">
-          <Link to="/login" className="button">Entrar</Link>
+          <Link to="login" className="button">Entrar</Link>
         </div>
       </header>
       <main className="app-content">

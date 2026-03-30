@@ -15,7 +15,7 @@ const Dashboard = () => {
 
     if (!token) {
       logout();
-      navigate("/login", { replace: true });
+      navigate("../login", { replace: true });
       return;
     }
 
@@ -32,7 +32,7 @@ const Dashboard = () => {
       .catch((error) => {
         if (error?.code === "UNAUTHORIZED") {
           logout();
-          navigate("/login", { replace: true });
+          navigate("../login", { replace: true });
         }
       });
   }, [getToken, logout, navigate]);

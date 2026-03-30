@@ -12,7 +12,7 @@ const Gamificacao = () => {
     const token = getToken();
     if (!token) {
       logout();
-      navigate("/login", { replace: true });
+      navigate("../login", { replace: true });
       return;
     }
 
@@ -21,7 +21,7 @@ const Gamificacao = () => {
       .catch((error) => {
         if (error?.code === "UNAUTHORIZED") {
           logout();
-          navigate("/login", { replace: true });
+          navigate("../login", { replace: true });
         }
       });
   }, [getToken, logout, navigate]);
